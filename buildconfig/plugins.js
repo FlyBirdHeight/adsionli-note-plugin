@@ -38,6 +38,6 @@ export default [
     serve({
         open: true,
         port: 7984,
-        contentBase: ''
+        contentBase: 'public'
     })
 ]
