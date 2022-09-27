@@ -1,0 +1,30 @@
+{
+    "name": "adsionli-note",
+    "description": "一款奇怪的笔记本",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "notifications",
+        "webRequest",
+        "storage", 
+        "activeTab", 
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "/public/index.html",
+        "default_icon": {
+            "16": "/images/adsionli-note.png",
+            "32": "/images/adsionli-note.png",
+            "48": "/images/adsionli-note.png",
+            "128": "/images/adsionli-note.png"
+        }
+    },
+    "icons": {
+        "16": "/images/adsionli-note.png",
+        "32": "/images/adsionli-note.png",
+        "48": "/images/adsionli-note.png",
+        "128": "/images/adsionli-note.png"
+    }
+}
