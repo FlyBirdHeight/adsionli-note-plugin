@@ -3,9 +3,8 @@ import { App, DefineComponent } from 'vue';
 
 const component = [chart];
 const version = '0.0.1';
-
-const install = (app) => {
-    component.map((item) => {
+const install = (app: App) => {
+    component.map((item: any) => {
         app.use(item);
     });
 };

@@ -10,22 +10,7 @@ import serve from "rollup-plugin-serve";
 
 const extensions = [".ts", ".js", ".tsx"];
 export default [
-    typescript({
-        lib: ["es5", "es6", "dom"],
-        target: "esnext",
-        module: "esnext",
-        strict: true,
-        jsx: "preserve",
-        noEmitOnError: true,
-        include: [
-            "*.ts",
-            "*.tsx",
-            "*.vue"
-        ],
-        exclude: [
-            "../node_modules"
-        ]
-    }),
+    typescript(),
     resolve({ mainFields: ["module", "main", "browser"] }),
     json(),
     commonjs({ extensions, sourceMap: true }),

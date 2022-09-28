@@ -1,12 +1,12 @@
 import { defineComponent, computed, App } from 'vue'
 
+type chartPropsType = {}
 const chartProps = {}
-
 const Chart = defineComponent({
   name: 'chart',
   props: chartProps,
 
-  setup(props) {
+  setup(props: chartPropsType) {
     const chickChart = () => {
       console.log('click')
     }
@@ -14,7 +14,7 @@ const Chart = defineComponent({
   },
 })
 
-Chart.install = (app) => {
+Chart.install = (app: App) => {
   app.component(Chart.name, Chart)
 }
 
