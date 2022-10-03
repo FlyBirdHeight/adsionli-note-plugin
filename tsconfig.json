@@ -1,20 +1,27 @@
 {
   "compilerOptions": {
-    "target": "esnext", 
+    "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
     "importHelpers": true,
-    "lib": ["es5", "es6", "dom"],
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ],
     "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
-    "strict": true, 
+    "strict": true,
     "skipLibCheck": true,
-    "noEmitOnError": true
+    "noEmitOnError": true,
+    "moduleResolution": "node"
   },
   "include": [
-    "src/"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
   ],
   "exclude": [
     "node_modules/"

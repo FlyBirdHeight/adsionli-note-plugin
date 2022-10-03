@@ -1,4 +1,4 @@
-import { defineComponent, computed, App } from 'vue'
+import { defineComponent, computed, withModifiers, App } from 'vue'
 
 type chartPropsType = {}
 const chartProps = {}
@@ -10,7 +10,15 @@ const Chart = defineComponent({
     const chickChart = () => {
       console.log('click')
     }
-    return <div onClick={chickChart}>Chart</div>
+    return (
+      <div
+        onClick={withModifiers(() => {
+          chickChart()
+        }, ['stop'])}
+      >
+        Chart
+      </div>
+    )
   },
 })
 

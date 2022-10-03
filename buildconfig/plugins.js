@@ -7,6 +7,7 @@ import cssnano from "cssnano";
 import json from "@rollup/plugin-json";
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
+import vue from "rollup-plugin-vue";
 
 const extensions = [".ts", ".js", ".tsx"];
 export default [
@@ -20,6 +21,7 @@ export default [
         extract: "dist/css/index.css"
     }),
     livereload(),
+    vue(),
     serve({
         open: true,
         port: 7984,
