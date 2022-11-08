@@ -5,8 +5,7 @@
     "jsx": "preserve",
     "importHelpers": true,
     "lib": [
-      "es5",
-      "es6",
+      "ESNext",
       "dom"
     ],
     "baseUrl": ".",
@@ -16,7 +15,12 @@
     "strict": true,
     "skipLibCheck": true,
     "noEmitOnError": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noImplicitThis": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
   },
   "include": [
     "src/**/*.ts",
@@ -24,6 +28,7 @@
     "src/**/*.vue",
   ],
   "exclude": [
-    "node_modules/"
+    "node_modules",
+    "dist"
   ]
 }

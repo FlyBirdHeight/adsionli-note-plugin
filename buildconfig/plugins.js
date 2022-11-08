@@ -1,4 +1,5 @@
-import typescript from "@rollup/plugin-typescript";
+// import typescript from "@rollup/plugin-typescript";
+import RollupPluginTypescript2 from "rollup-plugin-typescript2";
 import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import commonjs from "@rollup/plugin-commonjs";
@@ -9,9 +10,11 @@ import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
 import vue from "rollup-plugin-vue";
 
-const extensions = [".ts", ".js", ".tsx"];
+const extensions = [".ts", ".js", ".tsx", ".vue"];
 export default [
-    typescript(),
+    RollupPluginTypescript2(),
+    vue(),
+    // typescript(),
     resolve({ mainFields: ["module", "main", "browser"] }),
     json(),
     commonjs({ extensions, sourceMap: true }),
@@ -21,10 +24,9 @@ export default [
         extract: "dist/css/index.css"
     }),
     livereload(),
-    vue(),
     serve({
         open: true,
         port: 7984,
-        contentBase: 'public'
+        contentBase: ''
     })
 ]

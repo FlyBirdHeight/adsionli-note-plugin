@@ -1,12 +1,11 @@
-import { defineComponent, computed, withModifiers, App } from 'vue'
+import { defineComponent, withModifiers, App } from 'vue'
 
-type chartPropsType = {}
-const chartProps = {}
+// const chartProps = {}
 const Chart = defineComponent({
   name: 'chart',
-  props: chartProps,
+  // props: chartProps,
 
-  setup(props: chartPropsType) {
+  setup() {
     const chickChart = () => {
       console.log('click')
     }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "rollup -c --watch"
+    "dev": "rollup -c --watch",
+    "build": "rm -rf dist && rollup -c"
   },
   "author": "adsionli",
   "license": "ISC",
@@ -32,6 +33,7 @@
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-vue": "^6.0.0",
     "typescript": "^4.8.3"
   }

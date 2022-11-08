@@ -13,7 +13,7 @@
         "scripting"
     ],
     "action": {
-        "default_popup": "/public/index.html",
+        "default_popup": "/index.html",
         "default_icon": {
             "16": "/images/adsionli-note.png",
             "32": "/images/adsionli-note.png",

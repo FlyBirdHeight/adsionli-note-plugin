@@ -1,12 +1,17 @@
-import chart from './view/index';
-import { App, DefineComponent, createApp } from 'vue';
-// import Main from "./view/Main.vue"
+import { App, createApp } from 'vue';
+import Main from "./view/Main.vue";
+import chart from "./view/index";
+const version = "0.0.1";
 
-const component = [chart];
-const version = '0.0.1';
-// console.log(123);
+// createApp(Main).mount("#app");
+const app = createApp(Main);
+console.log(app);
 const install = (app: App) => {
-    app.mount('#app')
-};
+    console.log(app);
+    // app.use(chart);
+}
 
-export default install;
+export {
+    install,
+    version
+}

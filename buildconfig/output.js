@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
             dir: path + item,
             format: item,
             globals,
-            name: 'chartv',
+            name: 'adsionli',
         });
     });
 } else {
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
         dir: path,
         format: 'es',
         globals,
-        name: 'chartv',
+        name: 'adsionli',
         sourcemap: true
     });
 }
